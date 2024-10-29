@@ -1,0 +1,10 @@
+body {
+    margin: 0;;
+    background-color: #041A40;
+    background-image: url(/images/stars.png)
+}
+
+h1, h2 , h3, p, a {
+    color: white;
+}
+
