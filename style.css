@@ -25,23 +25,53 @@ h1, h2, h3 {
 
 header > h1::before {
     content: url(/images/s-sun.png);
-    padding-right: 100px
+    padding-right: 3rem;
+    padding-left: 2rem;
 }
 
 header > h1 {
     display: flex;
     justify-self: center;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    border-top: .3rem solid white;
+    border-bottom: .3rem solid white;
     align-items: center;
+}
+
+h2, h3, h4 {
+    justify-self: center;
+    border-top: .3rem solid white;
+    border-bottom: .3rem solid white;
+    padding: .6rem;
 }
 
 header > h1::after {
     content: url(images/smoondark.png);
-    padding-left: 70px;
+    padding-left: 2rem;
+}
+
+header > h2::before {
+    content: url(/images/m-moondark.png);
+    position: absolute;
+    top: 7rem;
+    left: 49%;
+    transform: translateX(-53%);
+}
+
+header > h2 {
+    margin-top: 10rem;
 }
 
 h2, div.summary {
     display: flex;
     justify-content: center;
+}
+
+div.preamble > h3 {
+    display: flex;
+    justify-self: flex-start;
+}
+
+div[role=main] > div[role=article] > h3 {
+    display: flex;
+    justify-self: flex-end;
 }
