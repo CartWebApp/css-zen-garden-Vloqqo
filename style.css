@@ -82,7 +82,6 @@ div h4 {
     padding-left: 3rem;
     padding-right: 3rem;
     margin: 4rem;
-    border-radius: 10rem;
     overflow: clip;
 }
 
@@ -115,12 +114,26 @@ div.summary {
 div.preamble>h3 {
     display: flex;
     justify-self: flex-start;
+    z-index: 5;
+    border-color: white;
+    color: #4C408E
+}
+
+
+
+div.preamble>h3::after {
+    content: url(/images/rocket.png);
+    position: absolute;
+    left: -70rem;
+    top: 31rem;
+    animation: 1000ms 1 normal slide-right;
+    z-index: -1;
 }
 
 div.preamble p {
     margin-right: 2rem;
     animation: 1000ms normal slide-right;
-    overflow: hidden;
+    overflow: clip;
 }
 
 @keyframes slide-right {
@@ -136,11 +149,25 @@ div.preamble p {
 div.explanation>h3:first-child {
     display: flex;
     justify-self: flex-end;
+    margin-top: 20rem;
+    border-color: white;
+    color:#4C408E;
+}
+
+div.explanation>h3::before {
+    content: url(/images/meteor.png);
+    position: absolute;
+    right: -40%;
+    top: 82%;
+    z-index: -1;
+    animation: 1000ms 1 normal slide-left;
+    overflow: clip;
 }
 
 div.explanation p {
     margin-left: 2rem;
     animation: 1000ms 1 normal slide-left;
+    /* animation-timeline: scroll() */
 }
 
 @keyframes slide-left {
@@ -153,10 +180,20 @@ div.explanation p {
     }
 }
 
-div.participation>h3:last-child {
+div.participation>h3 {
     justify-self: center;
+    margin-top: 20rem;
 }
 
+div.participation>h3::after {
+    content: url(/images/comet.png);
+    position: absolute;
+    left: -24%;
+    top: 126%;
+    z-index: -1;
+    animation: 1000ms 1 normal slide-right;
+    overflow: clip;
+}
 
 div[class~=main] {
     display: flex;
@@ -167,10 +204,26 @@ div[class~=main] {
 [id|=zen-benefits],
 div[id^=zen-req] {
     width: calc(90% / 2);
+    margin-top: 10rem;
 }
 
 [id|=zen-benefits] {
     animation: 1000ms normal slide-right;
+}
+
+[id|=zen-benefits] > h3, div[id^=zen-req] > h3 {
+    border-color: white;
+    color: #4C408E;
+}
+
+[id|=zen-benefits] > h3::after {
+    content: url(/images/rocket.png);
+    position: absolute;
+    left: -60%;
+    top: 202.4%;
+    z-index: -1;
+    animation: 1000ms normal slide-right;
+    overflow: clip;
 }
 
 [id|=zen-benefits] p {
@@ -181,20 +234,38 @@ div[id^=zen-req] {
     animation: 1000ms normal slide-left;
 }
 
+div[id^=zen-req] > h3::before {
+    content: url(/images/alienrocket.png);
+    position: absolute;
+    top: 193.5%;
+    right: -30%;
+    z-index: -1;
+    overflow: clip;
+    animation: 100ms normal slide-left;
+}
+
 div[id^=zen-req] p {
     background-color: #6B84A0
 }
 
 footer {
     position: absolute;
-    bottom: -105rem;
+    bottom: -160rem;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
 aside {
-    margin-top: 10rem
+    margin-top: 20rem
+}
+
+aside::after {
+    content: url(/images/earth.png);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -180rem;
+    overflow: clip;
 }
 
 aside > div.wrapper {
@@ -207,6 +278,10 @@ div.design-selection,
 [id$=archives],
 [id*=resources] {
     width: calc(97% /3);
+}
+
+div.zen-resources::after {
+    content: url(/images/bsun.png)
 }
 
 h3+ul,
