@@ -4,9 +4,11 @@
         url("/font/WebPlus_IBM_BIOS.woff") format("woff");
 }
 
-body {
+* {
     font-family: "IBM-Font";
-    margin: 0;;
+}
+
+:root {
     background-color: #041A40;
     background-image: url(/images/stars.png)
 }
@@ -16,6 +18,26 @@ p, a {
     font-family: "IBM-Font";
     font-size: 10px
 }
+
+p:first-of-type, div.summary > p:nth-child(2) {
+    padding-top: 1rem;
+}
+
+p:last-of-type, div.summary > p:nth-child(2) {
+    padding-bottom: 1rem;
+}
+div.summary > p:nth-child(2) {
+    margin-left: 0rem
+}
+
+p {
+    background-color: #4C408E;
+    padding: 2rem;
+    margin: -2rem;
+    border-radius: 1rem;
+}
+
+
 
 h1, h2, h3 {
     color: white;
@@ -29,7 +51,7 @@ header > h1::before {
     padding-left: 2rem;
 }
 
-header > h1 {
+#zen-intro > header > h1 {
     display: flex;
     justify-self: center;
     border-top: .3rem solid white;
@@ -37,11 +59,15 @@ header > h1 {
     align-items: center;
 }
 
-h2, h3, h4 {
+div h2, div h3, div h4 {
     justify-self: center;
     border-top: .3rem solid white;
     border-bottom: .3rem solid white;
     padding: .6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 4rem;
+    border-radius: 10rem;
 }
 
 header > h1::after {
@@ -61,17 +87,45 @@ header > h2 {
     margin-top: 10rem;
 }
 
-h2, div.summary {
+div.summary {
     display: flex;
     justify-content: center;
 }
 
-div.preamble > h3 {
+div.preamble > h3  {
     display: flex;
     justify-self: flex-start;
 }
 
-div[role=main] > div[role=article] > h3 {
+div.explanation > h3:first-child {
     display: flex;
     justify-self: flex-end;
+}
+
+div.participation > h3:last-child {
+    justify-self: center;
+}
+
+div[class~=main] {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between
+}
+
+[id|=zen-benefits], div[id^=zen-req] {
+    width: calc(97% / 2);
+}
+
+body + aside + [id$=archives] + [id*=resources] {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+aside, div.design-archives, div.zen-resources {
+    width: calc(97% / 3)
+}
+
+h3 + ul, h3 ~ nav {
+    color: white
 }
