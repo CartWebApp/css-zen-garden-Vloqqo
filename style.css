@@ -123,11 +123,11 @@ div.preamble>h3 {
 div.preamble>h3::after {
     content: url(/images/rocket.png);
     position: absolute;
-    left: -70rem;
-    top: 30.8rem;
-    animation: 10ms 1 normal slide-right;
+    left: -59%;
+    top: 48.5%;
+    animation: 1ms 1 normal slide-right;
     animation-timeline: view();
-    animation-range-start: 0.9%;
+    animation-range-start: -0.1%;
     z-index: -1;
 }
 
@@ -139,11 +139,12 @@ div.preamble p {
 
 @keyframes slide-right {
     from {
-        translate: -170vw 0;
+        translate: -150% 0;
+
     }
 
     to {
-        translate: 1rem 0;
+        translate: 1% 0;
     }
 }
 
@@ -159,7 +160,7 @@ div.explanation>h3::before {
     content: url(/images/meteor.png);
     position: absolute;
     right: -40%;
-    top: 89%;
+    top: 86%;
     z-index: -1;
     animation: 10ms 1 normal slide-left-shrink;
     animation-timeline: view();
@@ -196,7 +197,7 @@ div.participation>h3::after {
     content: url(/images/comet.png);
     position: absolute;
     left: -34%;
-    top: 138%;
+    top: 127%;
     z-index: -1;
     animation: 1000ms 1 normal slide-right-shrink;
     animation-timeline: view();
@@ -240,10 +241,6 @@ div[id^=zen-req] {
     margin-top: 10rem;
 }
 
-[id|=zen-benefits] {
-
-}
-
 [id|=zen-benefits] > h3, div[id^=zen-req] > h3 {
     border-color: white;
     color: #4C408E;
@@ -252,8 +249,8 @@ div[id^=zen-req] {
 [id|=zen-benefits] > h3::after {
     content: url(/images/rocket.png);
     position: absolute;
-    left: -67%;
-    top: 219.9%;
+    left: -65%;
+    bottom: -115.5%;
     z-index: -1;
     overflow: clip;
     animation: 10ms 1 normal slide-right;
@@ -271,8 +268,8 @@ div[id^=zen-req] {
 div[id^=zen-req] > h3::before {
     content: url(/images/alienrocket.png);
     position: absolute;
-    top: 210.4%;
-    left: 54.5%;
+    bottom: -125.8%;
+    left: 50.5%;
     z-index: -1;
     overflow: clip;
     animation: 10ms 1 normal slide-left;
@@ -284,37 +281,38 @@ div[id^=zen-req] p {
     background-color: #6B84A0;
 }
 
-footer {
-    position: absolute;
-    bottom: -160rem;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* footer::after {
+footer::before {
     content: '';
     height: 22.375rem;
     width: 21.625rem;
     background-color: #A4D410;
     border-radius: 50%;
-    clip-path: polygon(0 0 50% 0);
+    clip-path: inset(0 0 50% 0);
     position: absolute;
     transform: rotate(17deg);
-    bottom: -31.4rem;
+    top: -920%;
     z-index: -1;
-    right: 3.6rem
-} */
+    left: 180%;
+    overflow: clip;
+}
+
+footer {
+    position: absolute;
+    bottom: -280%;
+    left: 20%;
+    transform: translateX(-50%);
+}
 
 aside {
-    margin-top: 10rem
+    margin-top: 10rem;
 }
 
 aside::after {
-    content: url(/images/earth.png);
+    content: url(/images/earth2.png);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -180rem;
+    bottom: -280%;
     overflow-y: clip;
     z-index: -1;
 }
@@ -328,13 +326,14 @@ aside > div.wrapper {
 div.design-selection,
 [id$=archives],
 [id*=resources] {
+    flex-flow: row wrap;
     width: calc(97% /3);
 }
 
 div.zen-resources::after {
     content: url(/images/bsun.png);
     position: absolute;
-    top: 340%;
+    top: 320%;
     animation: 1s infinite normal sun-spin;
 }
 
