@@ -161,7 +161,7 @@ div.explanation>h3::before {
     right: -40%;
     top: 89%;
     z-index: -1;
-    animation: 10ms 1 normal slide-left;
+    animation: 10ms 1 normal slide-left-shrink;
     animation-timeline: view();
     animation-range-start: -90%;
     overflow: clip;
@@ -198,10 +198,34 @@ div.participation>h3::after {
     left: -34%;
     top: 138%;
     z-index: -1;
-    animation: 1000ms 1 normal slide-right;
+    animation: 1000ms 1 normal slide-right-shrink;
     animation-timeline: view();
     overflow: clip;
     animation-range-start: -30%
+}
+
+@keyframes slide-right-shrink {
+    from {
+        translate: -170vw 0;
+        transform: scale(0.00000000000000000001)
+    }
+
+    to {
+        translate: 1rem 0;
+        transform: scale(1)
+    }
+}
+
+@keyframes slide-left-shrink {
+    from {
+        translate: 440vw 0;
+        transform: scale(0.00000000000001)
+    }
+
+    to {
+        translate: -1rem 0;
+        transform: scale(1)
+    }
 }
 
 div[class~=main] {
@@ -267,6 +291,20 @@ footer {
     transform: translateX(-50%);
 }
 
+/* footer::after {
+    content: '';
+    height: 22.375rem;
+    width: 21.625rem;
+    background-color: #A4D410;
+    border-radius: 50%;
+    clip-path: polygon(0 0 50% 0);
+    position: absolute;
+    transform: rotate(17deg);
+    bottom: -31.4rem;
+    z-index: -1;
+    right: 3.6rem
+} */
+
 aside {
     margin-top: 10rem
 }
@@ -277,8 +315,8 @@ aside::after {
     left: 50%;
     transform: translateX(-50%);
     bottom: -180rem;
-    overflow: clip;
-    
+    overflow-y: clip;
+    z-index: -1;
 }
 
 aside > div.wrapper {
@@ -297,10 +335,14 @@ div.zen-resources::after {
     content: url(/images/bsun.png);
     position: absolute;
     top: 340%;
-    animation: 1s infinite normal earth-spin;
+    animation: 1s infinite normal sun-spin;
 }
 
-@keyframes earth-spin {
+div.extra1 {
+    position: relative;
+    overflow: clip;
+}
+@keyframes sun-spin {
     0%{
         transform: rotate(0deg);
     }
