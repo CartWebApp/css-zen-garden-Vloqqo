@@ -287,28 +287,21 @@ div[id^=zen-req] p {
     background-color: #6B84A0;
 }
 
-footer {
-    position: absolute;
-    bottom: -282vh;
-    left: 50vw;
-    transform: translateX(-50%);
-}
-
-/* footer::after {
+/* footer::before {
     content: '/images/land.svg';
     height: 100%;
     position: absolute;
     transform: rotate(17deg);
-    top: -920%;
+    top: -920vh;
     z-index: -1;
-    left: 180%;
+    left: 180vw;
     overflow: clip;
-}
+} */
 
 footer {
     position: absolute;
-    bottom: -280%;
-    left: 20%;
+    bottom: -316.136vh;
+    left: 20vw;
     transform: translateX(-50%);
 }
 
@@ -335,13 +328,14 @@ aside > div.wrapper {
 div.design-selection,
 [id$=archives],
 [id*=resources] {
+    flex-flow: row wrap;
     width: calc(97vw /3);
 }
 
 div.zen-resources::after {
     content: url(/images/bsun.png);
     position: absolute;
-    top: 340vh;
+    top: 360vh;
     animation: 1s infinite normal sun-spin;
 }
 
