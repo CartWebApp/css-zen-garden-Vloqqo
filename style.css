@@ -9,6 +9,8 @@
 }
 
 :root {
+    display: flex;
+    flex-flow: row wrap;
     background-color: #041A40;
     background-image: url(/images/stars.png);
     background-size: 99%;
@@ -24,23 +26,23 @@ a {
 
 p:first-of-type,
 div.summary>p:nth-child(2) {
-    padding-top: 2rem;
+    padding-top: 3.513vh;
 }
 
 p:last-of-type,
 div.summary>p:nth-child(2) {
-    padding-bottom: 2rem;
+    padding-bottom: 3.513vh;
 }
 
 div.summary>p:nth-child(2) {
-    margin-top: 1rem;
+    margin-top: 1.756vh;
 }
 
 p {
     background-color: #4C408E;
-    padding: 2rem;
-    margin: -2rem;
-    border-radius: 1rem;
+    padding: 3.513vh;
+    margin: -3.513vh;
+    border-radius: 1.756vh;
     overflow: clip;
 }
 
@@ -59,15 +61,15 @@ h3 {
 
 header>h1::before {
     content: url(/images/s-sun.png);
-    padding-right: 3rem;
-    padding-left: 2rem;
+    padding-right: 4.444vh;
+    padding-left: 3.513vh;
 }
 
 #zen-intro > header > h1 {
     display: flex;
     justify-self: center;
-    border-top: .3rem solid white;
-    border-bottom: .3rem solid white;
+    border-top: 0.527vh solid white;
+    border-bottom: 0.527vh solid white;
     align-items: center;
 }
 
@@ -75,31 +77,31 @@ div h2,
 div h3,
 div h4 {
     justify-self: center;
-    border-top: .3rem solid white;
-    border-bottom: .3rem solid white;
-    padding: .6rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin: 4rem;
+    border-top: 0.527vh solid white;
+    border-bottom: 0.527vh solid white;
+    padding: 1.054vh;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    margin: 7.025vh;
     overflow: clip;
 }
 
 header>h1::after {
     content: url(images/smoondark.png);
-    padding-left: 2rem;
+    padding-left: 3.513vh;
 }
 
 header>h2::before {
     content: url(/images/m-moondark.png);
     position: absolute;
-    top: 7rem;
-    left: 49%;
+    top: 12.5%;
+    left: 48.5vw;
     transform: translateX(-53%);
-    margin-top: 1rem;
+    margin-top: 1.756vh;
 }
 
 header> h2 {
-    margin-top: 12rem;
+    margin-top: 21.076vh;
 }
 
 div.summary {
@@ -123,16 +125,17 @@ div.preamble>h3 {
 div.preamble>h3::after {
     content: url(/images/rocket.png);
     position: absolute;
-    left: -70rem;
-    top: 30.8rem;
+    left: -55vw;
+    top: 55vh;
     animation: 10ms 1 normal slide-right;
     animation-timeline: view();
-    animation-range-start: 0.9%;
+    animation-range-start: 41vh;
     z-index: -1;
 }
 
 div.preamble p {
-    margin-right: 2rem;
+    margin-left: -1vw;
+    margin-right: 2vw;
     animation: 1000ms normal slide-right;
     overflow: clip;
 }
@@ -143,65 +146,64 @@ div.preamble p {
     }
 
     to {
-        translate: 1rem 0;
+        translate: 1.756vh 0;
     }
-}
-
-div.explanation>h3:first-child {
-    display: flex;
-    justify-self: flex-end;
-    margin-top: 20rem;
-    border-color: white;
-    color:#4C408E;
 }
 
 div.explanation>h3::before {
     content: url(/images/meteor.png);
     position: absolute;
-    right: -40%;
-    top: 89%;
+    right: -40vw;
+    top: 89vh;
     z-index: -1;
     animation: 10ms 1 normal slide-left-shrink;
     animation-timeline: view();
-    animation-range-start: -90%;
+    animation-range-start: -90vh;
     overflow: clip;
 }
 
+div.explanation>h3:first-child {
+    display: flex;
+    justify-self: flex-end;
+    margin-top: 14%;
+    border-color: white;
+    color:#4C408E;
+}
+
 div.explanation p {
-    margin-left: 2rem;
+    margin-left: 3.513vh;
     animation: 1000ms 1 normal slide-left;
-    animation: 1000ms 1 normal slide-right;
     animation-timeline: view();
-    animation-range-start: -1400%;
+    animation-range-start: -1400vh;
     /* animation-timeline: scroll() */
 }
 
 @keyframes slide-left {
     from {
-        translate: 1000rem 0;
+        translate: 1756.312vh 0;
     }
 
     to {
-        translate: -1rem 0;
+        translate: -1.756vh 0;
     }
 }
 
 div.participation>h3 {
     justify-self: center;
-    margin-top: 20rem;
+    margin-top: 35.126vh;
     color: #4C408E
 }
 
 div.participation>h3::after {
     content: url(/images/comet.png);
     position: absolute;
-    left: -34%;
-    top: 138%;
+    left: -34vw;
+    top: 138vh;
     z-index: -1;
     animation: 1000ms 1 normal slide-right-shrink;
     animation-timeline: view();
     overflow: clip;
-    animation-range-start: -30%
+    animation-range-start: -30vh;
 }
 
 @keyframes slide-right-shrink {
@@ -211,7 +213,7 @@ div.participation>h3::after {
     }
 
     to {
-        translate: 1rem 0;
+        translate: 1.756vh 0;
         transform: scale(1)
     }
 }
@@ -223,7 +225,7 @@ div.participation>h3::after {
     }
 
     to {
-        translate: -1rem 0;
+        translate: -1.756vh 0;
         transform: scale(1)
     }
 }
@@ -236,8 +238,8 @@ div[class~=main] {
 
 [id|=zen-benefits],
 div[id^=zen-req] {
-    width: calc(90% / 2);
-    margin-top: 10rem;
+    width: calc(85vw / 2);
+    margin-top: 14.815vh;
 }
 
 [id|=zen-benefits] {
@@ -252,32 +254,32 @@ div[id^=zen-req] {
 [id|=zen-benefits] > h3::after {
     content: url(/images/rocket.png);
     position: absolute;
-    left: -67%;
-    top: 219.9%;
+    left: -67vw;
+    top: 222.2vh;
     z-index: -1;
     overflow: clip;
     animation: 10ms 1 normal slide-right;
     animation-timeline: view();
-    animation-range-start: -380%;
+    animation-range-start: -40vh;
 }
 
 [id|=zen-benefits] p {
     background-color: #6B84A0;
     animation: 100ms 1 normal slide-right;
     animation-timeline: view();
-    animation-range-start: -700%;
+    animation-range-start: -700vh;
 }
 
 div[id^=zen-req] > h3::before {
     content: url(/images/alienrocket.png);
     position: absolute;
-    top: 210.4%;
-    left: 54.5%;
+    top: 212.2vh;
+    left: 54.5vw;
     z-index: -1;
     overflow: clip;
     animation: 10ms 1 normal slide-left;
     animation-timeline: view();
-    animation-range-start: -380%;
+    animation-range-start: -380vh;
 }
 
 div[id^=zen-req] p {
@@ -286,18 +288,14 @@ div[id^=zen-req] p {
 
 footer {
     position: absolute;
-    bottom: -160rem;
-    left: 50%;
+    bottom: -282vh;
+    left: 50vw;
     transform: translateX(-50%);
 }
 
 /* footer::after {
-    content: '';
-    height: 22.375rem;
-    width: 21.625rem;
-    background-color: #A4D410;
-    border-radius: 50%;
-    clip-path: polygon(0 0 50% 0);
+    content: '/images/land.svg';
+    height: 100%;
     position: absolute;
     transform: rotate(17deg);
     bottom: -31.4rem;
@@ -306,15 +304,15 @@ footer {
 } */
 
 aside {
-    margin-top: 10rem
+    margin-top: 17.563vh;
 }
 
 aside::after {
     content: url(/images/earth.png);
     position: absolute;
-    left: 50%;
+    left: 50vw;
     transform: translateX(-50%);
-    bottom: -180rem;
+    bottom: -316.136vh;
     overflow-y: clip;
     z-index: -1;
 }
@@ -328,13 +326,13 @@ aside > div.wrapper {
 div.design-selection,
 [id$=archives],
 [id*=resources] {
-    width: calc(97% /3);
+    width: calc(97vw /3);
 }
 
 div.zen-resources::after {
     content: url(/images/bsun.png);
     position: absolute;
-    top: 340%;
+    top: 340vh;
     animation: 1s infinite normal sun-spin;
 }
 
