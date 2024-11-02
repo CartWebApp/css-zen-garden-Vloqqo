@@ -142,7 +142,8 @@ div.preamble p {
 
 @keyframes slide-right {
     from {
-        translate: -170vw 0;
+        translate: -150% 0;
+
     }
 
     to {
@@ -298,17 +299,25 @@ footer {
     height: 100%;
     position: absolute;
     transform: rotate(17deg);
-    bottom: -31.4rem;
+    top: -920%;
     z-index: -1;
-    right: 3.6rem
-} */
+    left: 180%;
+    overflow: clip;
+}
+
+footer {
+    position: absolute;
+    bottom: -280%;
+    left: 20%;
+    transform: translateX(-50%);
+}
 
 aside {
     margin-top: 17.563vh;
 }
 
 aside::after {
-    content: url(/images/earth.png);
+    content: url(/images/earth2.png);
     position: absolute;
     left: 50vw;
     transform: translateX(-50%);
