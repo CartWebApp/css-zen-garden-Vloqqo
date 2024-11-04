@@ -112,7 +112,7 @@ div.summary {
     overflow: clip;
 }
 
-div.preamble>h3 {
+div.summary ~ div.preamble>h3 {
     display: flex;
     justify-self: flex-start;
     z-index: 5;
@@ -237,14 +237,14 @@ div[class~=main] {
     justify-content: space-between
 }
 
-[id|=zen-benefits],
-div[id^=zen-req] {
+[id|=zen-benefits] {
     width: calc(85vw / 2);
     margin-top: 14.815vh;
 }
 
-[id|=zen-benefits] {
-
+[id|=zen-benefits] + div[id^=zen-req] {
+    width: calc(85vw / 2);
+    margin-top: 14.815vh;
 }
 
 [id|=zen-benefits] > h3, div[id^=zen-req] > h3 {
@@ -271,7 +271,7 @@ div[id^=zen-req] {
     animation-range-start: -700vh;
 }
 
-div[id^=zen-req] > h3::before {
+div[id$=-requirements] > h3::before {
     content: url(/images/alienrocket.png);
     position: absolute;
     top: 212.2vh;
@@ -283,25 +283,14 @@ div[id^=zen-req] > h3::before {
     animation-range-start: -380vh;
 }
 
-div[id^=zen-req] p {
+div[id*=en-req] p {
     background-color: #6B84A0;
 }
 
-/* footer::before {
-    content: '/images/land.svg';
-    height: 100%;
-    position: absolute;
-    transform: rotate(17deg);
-    top: -920vh;
-    z-index: -1;
-    left: 180vw;
-    overflow: clip;
-} */
-
 footer {
     position: absolute;
-    bottom: -316.136vh;
-    left: 20vw;
+    bottom: -293vh;
+    left: 50vw;
     transform: translateX(-50%);
 }
 
@@ -309,14 +298,45 @@ aside {
     margin-top: 17.563vh;
 }
 
-aside::after {
-    content: url(/images/earth2.png);
+/* aside::after {
+    content: "";
     position: absolute;
+    bottom: -360vh;
+    height: 600px;
+    width: 600px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 1;
+    background-image: url(/images/e1.png);
+    background-size: 210vh;
+    aspect-ratio: 1;
+    box-shadow: inset 0px 0px 5px #FDFfF29E;
+    animation: earth 60s infinite linear;
     left: 50vw;
     transform: translateX(-50%);
-    bottom: -316.136vh;
-    overflow-y: clip;
-    z-index: -1;
+} */
+
+aside::after {
+    content: url(/images/earth.avif);
+    position: absolute;
+    bottom: -360vh;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
+@keyframes earth {
+    0% {
+        background-position: 0 center;
+    }
+
+    100% {
+        background-position: 94.792vw center;
+    }
+
+    0% {
+        background-position: 0 center;
+    }
 }
 
 aside > div.wrapper {
@@ -335,7 +355,7 @@ div.design-selection,
 div.zen-resources::after {
     content: url(/images/bsun.png);
     position: absolute;
-    top: 360vh;
+    top: 366vh;
     animation: 1s infinite normal sun-spin;
 }
 
@@ -343,6 +363,7 @@ div.extra1 {
     position: relative;
     overflow: clip;
 }
+
 @keyframes sun-spin {
     0%{
         transform: rotate(0deg);
@@ -358,4 +379,24 @@ div.extra1 {
 h3+ul,
 h3~nav {
     color: white;
+}
+
+a:active {
+    color: blue;
+}
+
+a:hover {
+    color: lightskyblue;
+}
+
+a:visited {
+    color: rgb(218, 69, 255);
+}
+
+a:link {
+    color: #5892ff;
+}
+
+p::selection {
+    color: yellow;
 }
