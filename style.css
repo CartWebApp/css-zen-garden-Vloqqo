@@ -8,15 +8,7 @@
     font-family: "IBM-Font";
     font-size: 12px;
     color: white;
-}
-
-:root:nth-of-type(1) {
-    display: flex;
-    flex-flow: row wrap;
-    background-color: #041A40;
-    background-image: url(/images/stars.png);
-    background-size: 99%;
-    overflow-x: clip;
+    overflow-x:visible;
 }
 
 p,
@@ -437,4 +429,13 @@ div.participation > p {
     padding-left: 6vh;
     padding-right: 6vh;
     overflow: clip;
+}
+
+:root:nth-of-type(1) {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #041A40;
+    background-image: url(/images/stars.png);
+    background-size: 99%;
+    overflow-x: clip;
 }
