@@ -6,9 +6,11 @@
 
 * {
     font-family: "IBM-Font";
+    font-size: 12px;
+    color: white;
 }
 
-:root {
+:root:nth-of-type(1) {
     display: flex;
     flex-flow: row wrap;
     background-color: #041A40;
@@ -18,10 +20,9 @@
 }
 
 p,
-a {
+a, abbr {
     color: white;
     font-family: "IBM-Font";
-    font-size: 12px
 }
 
 p:first-of-type,
@@ -100,7 +101,7 @@ header>h2::before {
     margin-top: 1.756vh;
 }
 
-header> h2 {
+header> h2:only-of-type {
     margin-top: 21.076vh;
 }
 
@@ -155,7 +156,7 @@ div.explanation>h3::before {
     content: url(/images/meteor.png);
     position: absolute;
     right: -40vw;
-    top: 89vh;
+    top: 92vh;
     z-index: -1;
     animation: 10ms 1 normal slide-left-shrink;
     animation-timeline: view();
@@ -163,7 +164,7 @@ div.explanation>h3::before {
     overflow: clip;
 }
 
-div.explanation>h3:first-child {
+div.explanation>h3:nth-last-child(3) {
     display: flex;
     justify-self: flex-end;
     margin-top: 14%;
@@ -189,7 +190,7 @@ div.explanation p {
     }
 }
 
-div.participation>h3 {
+div.participation>h3:nth-last-of-type(1) {
     justify-self: center;
     margin-top: 35.126vh;
     color: #4C408E
@@ -199,7 +200,7 @@ div.participation>h3::after {
     content: url(/images/comet.png);
     position: absolute;
     left: -34vw;
-    top: 138vh;
+    top: 145vh;
     z-index: -1;
     animation: 1000ms 1 normal slide-right-shrink;
     animation-timeline: view();
@@ -256,7 +257,7 @@ div[class~=main] {
     content: url(/images/rocket.png);
     position: absolute;
     left: -67vw;
-    top: 222.2vh;
+    top: 231.7vh;
     z-index: -1;
     overflow: clip;
     animation: 10ms 1 normal slide-right;
@@ -274,7 +275,7 @@ div[class~=main] {
 div[id$=-requirements] > h3::before {
     content: url(/images/alienrocket.png);
     position: absolute;
-    top: 212.2vh;
+    top: 221.5vh;
     left: 54.5vw;
     z-index: -1;
     overflow: clip;
@@ -298,6 +299,14 @@ aside {
     margin-top: 17.563vh;
 }
 
+aside::after {
+    content: url(/images/Earth.svg);
+    position: absolute;
+    bottom: -327.5vh;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
 /* aside::after {
     content: "";
     position: absolute;
@@ -316,16 +325,18 @@ aside {
     left: 50vw;
     transform: translateX(-50%);
 } */
-
-aside::after {
+/* probably cant use this bc of the rules 
+delete all files related and this code if 
+uploading to zen garden*/
+/* aside::after {
     content: url(/images/earth.avif);
     position: absolute;
     bottom: -360vh;
     left: 50vw;
     transform: translateX(-50%);
-}
+} */
 
-@keyframes earth {
+/* @keyframes earth {
     0% {
         background-position: 0 center;
     }
@@ -337,7 +348,7 @@ aside::after {
     0% {
         background-position: 0 center;
     }
-}
+} */
 
 aside > div.wrapper {
     display: flex;
@@ -355,13 +366,8 @@ div.design-selection,
 div.zen-resources::after {
     content: url(/images/bsun.png);
     position: absolute;
-    top: 366vh;
+    top: 372vh;
     animation: 1s infinite normal sun-spin;
-}
-
-div.extra1 {
-    position: relative;
-    overflow: clip;
 }
 
 @keyframes sun-spin {
@@ -375,9 +381,10 @@ div.extra1 {
         transform: rotate(0deg);
     }
 } 
-
-h3+ul,
-h3~nav {
+abbr {
+    color: rgb(218, 69, 255);
+}
+a:only-child {
     color: white;
 }
 
@@ -386,7 +393,7 @@ a:active {
 }
 
 a:hover {
-    color: lightskyblue;
+    color: rgb(159, 201, 255);
 }
 
 a:visited {
@@ -399,4 +406,35 @@ a:link {
 
 p::selection {
     color: yellow;
+}
+
+p::first-letter {
+    font-size: 14px;
+}
+
+[id|=zen-benefits] abbr, div[id^=zen-req] abbr {
+    color:aqua;
+}
+
+[id|=zen-benefits] a, div[id^=zen-req] a {
+        color: rgb(15, 255, 175);
+}
+
+[id|=zen-benefits] a:visited, div[id^=zen-req] a:visited {
+    color: rgb(235, 155, 255);
+}
+
+h2 abbr {
+    font-size: 24px;
+}
+
+:not(div.summary>p) {
+    line-height: 2vh;
+}
+
+div.participation > p {
+    padding: 3.513vh;
+    padding-left: 6vh;
+    padding-right: 6vh;
+    overflow: clip;
 }
