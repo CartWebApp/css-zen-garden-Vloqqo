@@ -135,7 +135,7 @@ div.preamble p {
 
 @keyframes slide-right {
     from {
-        translate: -150% 0;
+        translate: -50vw 0;
 
     }
 
